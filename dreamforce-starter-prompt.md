@@ -14,7 +14,7 @@ I collected the posts with [Apify](https://apify.com/?fpr=adamgtm), then used Co
 
 ## What's in the file
 
-2,856 rows, one per post, published between 2026-09-08 and 2026-09-18. 12 columns:
+2,856 rows, one per post, published between 2026-09-08 and 2026-09-18. 13 columns:
 
 | Column | What it is |
 |---|---|
@@ -23,6 +23,7 @@ I collected the posts with [Apify](https://apify.com/?fpr=adamgtm), then used Co
 | `author_headline` | Their LinkedIn headline as captured. Raw, blank on 156 rows. This is your handle for segmenting the file. |
 | `author_type` | `person` or `company`. 747 rows are company pages. |
 | `is_repost` | `yes` on 226 rows. It's a reshare, so `post_text` is the resharer's own commentary and not the post they shared. |
+| `has_media` | `yes` on 2,160 rows: the post carried an image or video. Those rows have a median 29 engagements against 9 for the rest. |
 | `likes` `comments` `reposts` | Counts as measured once, on 2026-09-19. |
 | `total_engagement` | The three added. Range 0 to 5,583, and 194,408 across the file. |
 | `summary` | One sentence per post, written by Claude, naming what the post says. |
